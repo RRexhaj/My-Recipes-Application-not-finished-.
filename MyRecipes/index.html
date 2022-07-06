@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MyRecipes</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+        .img{
+            size: 10px;
+        }
+        #img{
+            size:10px;
+        }
+    </style>
+</head>
+
+<body>
+    <ion-app>
+        <ion-tabs>
+            <ion-tab tab="music">
+              </ion-content>
+              <ion-header>
+                <ion-toolbar class="new-colour">
+                    <ion-title>
+                        <ion-icon name="restaurant-outline"></ion-icon>
+                        <ion-label>MyRecipes</ion-label>
+                    </ion-title>
+                    <ion-buttons slot="end">
+                        <ion-button href="index.html">
+                            <ion-icon name="list-outline" slot="start"></ion-icon>
+                            <ion-label>Recipes</ion-label>
+                        </ion-button>
+                    </ion-buttons>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content>
+                <h2 class="ion-padding-start">New Recipe</h2>
+                <ion-list>
+                    <ion-item>
+                        <ion-label position="stacked">Recipe Name</ion-label>
+                        <ion-input id="title" placeholder="Chicken Tikka Masala"></ion-input>
+                    </ion-item>
+                    <ion-item>
+                        <ion-label position="stacked">Ingredients</ion-label>
+                        <!-- https://stackoverflow.com/questions/7312623/insert-line-break-inside-placeholder-attribute-of-a-textarea -->
+                        <ion-textarea rows="10" id="ingredients" placeholder="1 Onion
+            2 Garlic
+            Chicken Breast
+            Cumin Seeds"></ion-textarea>
+                    </ion-item>
+            
+                    <ion-item>
+                        <ion-label>Recipe Type</ion-label>
+                        <ion-select id="selection" ok-text="Okay" cancel-text="Nah">
+                            <ion-select-option value="BreakFast">BreakFast</ion-select-option>
+                            <ion-select-option value="Lunch">Lunch</ion-select-option>
+                            <ion-select-option value="Dinner">Dinner</ion-select-option>
+                            <ion-select-option value="Desert">Desert</ion-select-option>
+                        </ion-select>
+                    </ion-item>
+                    <ion-button id="saveButton" class="new-fab-colour ion-padding" expand="full">
+                        <ion-icon name="save-outline" slot="start"></ion-icon>
+                        <ion-label>Save Recipe</ion-label>
+                    </ion-button>
+                </ion-list>
+            </ion-content>
+            </ion-tab>
+        
+            <ion-tab tab="movies">
+              <ion-header>
+                <ion-toolbar class="new-colour">
+                    <ion-title><ion-icon name="restaurant-outline"></ion-icon> MyRecipes</ion-title>
+                    <ion-buttons slot="end">
+                        <ion-button id="clearBtn">
+                            <ion-icon name="trash-outline" slot="start"></ion-icon> <ion-label>Clear</ion-label>
+                        </ion-button>
+                    </ion-buttons>
+                </ion-toolbar>
+            </ion-header>
+            
+            <ion-content>
+                <div id="recipes" class="ion-padding"></div>
+
+         
+            </ion-content>
+            
+            </ion-tab>
+        
+            <ion-tab tab="games">
+              <ion-header>
+                <ion-toolbar class="new-colour">
+                    <ion-title><ion-icon name="restaurant-outline"></ion-icon> MyRecipes</ion-title>
+                </ion-toolbar>
+            </ion-header>
+            
+            <ion-content>
+                <div id="recipes" class="ion-padding"></div>
+                <ion-card>
+                    <ion-card-header>
+                        <ion-card-title>MyRecipies </ion-card-title>
+                        <ion-card-subtitle>Rei Rexhaj</ion-card-subtitle>
+                        <img src="assets/231.png" id="img">
+                    </ion-card-header>
+                    <ion-card-content>
+                        My project is designed to be user-friendly and the purpose is to store your own recipes.
+                    </ion-card-content>
+                </ion-card>
+            </ion-content>
+            </ion-tab>
+        
+            <ion-tab-bar slot="bottom">
+              <ion-tab-button tab="music">
+                <ion-label>Make Recipe</ion-label>
+                <ion-icon name="create-outline"></ion-icon>
+              </ion-tab-button>
+              <ion-tab-button tab="movies">
+                <ion-label>Recipes</ion-label>
+                <ion-icon name="restaurant-outline"></ion-icon>
+              </ion-tab-button>
+              <ion-tab-button tab="games">
+                <ion-label>About us</ion-label>
+                <ion-icon name="create-outline"></ion-icon>
+              </ion-tab-button>
+            </ion-tab-bar>
+          </ion-tabs>
+        <script src="js/add.js"></script>
+        <script src="js/list.js"></script>
+        
+    </ion-app>
+</body>
+
+</html>
+
+
+
+
+ 

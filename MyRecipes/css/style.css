@@ -1,0 +1,9 @@
+.new-colour {
+    --background: white;
+    color: #06c169;
+}
+
+.new-fab-colour {
+    --background:#06c169;
+    color: white;
+}
